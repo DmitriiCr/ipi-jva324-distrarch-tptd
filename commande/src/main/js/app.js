@@ -57,7 +57,7 @@ const CommandeList = ({ commandes, refreshCommande }) => {
         <table>
             <tbody>
                 <tr>
-                    <th>ID</th>
+                    <th>ID Hello</th>
                     <th>produitId</th>
                     <th>quantite</th>
                     <th>quantiteDisponibleStockConnu</th>
@@ -149,6 +149,7 @@ const NouvelleCommandeDeProduit = ({ produit, refreshCommande }) => {
             <br/>
             {produit.description || '-'}
             <br/>
+            <button onClick={create}>Nouvelle commande de ce produit</button>
             <button onClick={create}>Nouvelle commande de ce produit</button>
             <p/>
         </div>
