@@ -159,7 +159,7 @@ TODO NON [TD] (à ne faire que s'il n'existe pas encore) Copiez le module Maven 
 [TD] Quel problème apparaît en essayant de le faire marcher (démarrage test ou IHM), pourquoi ? Pour le résoudre, pour l'instant commentez l'annotation en tête de CommandeProduitLocalImpl. Vérifiez que tests et IHM marchent toujours.
 
 [TD] Ecrivez dans une classe CommandeProduitServiceRestHalImplIntegrationTest un test d'intégration de CommandeProduitServiceRESTHALImpl, le plus simple possible (test de son appel distant).
-
+    
 [TD] Déplacez CommandeProduitServiceLocalImpl dans le dossier de sources "test" (plutôt que "main"). Faites en sorte que son test marche toujours. Pour cela, définissez son instanciation (aide: comme celle de RestTemplate, voir le cours...) dans une classe TestLocalConfiguration annotée @Configuration utilisée dans le test en annotant ce dernier @Import(TestLocalConfiguration). TODO cours
 
 [TD] BONUS Ecrivez une version mockée du test existant de commandeService.createCommande().
@@ -172,7 +172,7 @@ TODO NON [TD] (à ne faire que s'il n'existe pas encore) Copiez le module Maven 
 
 [TD] Copiez le module Maven d'origine vers un module "stock". Adaptez sa configuration de build (pom.xml) en conséquence, et branchez-la dans le pom. xml racine.
 - Développez dans ce module stock un test unitaire de la SEULE partie stock (dans com.ipi.jva324.stock) qui vérifie un bon usage nominal de manière simple (sans la partie ReceptionDeProduit), vérifiez qu'il marche.
-- Supprimez du module stock tout le code Java de la partie commande, et renommez et déplacez la classe de démarrage Spring Boot en com.ipi.jva324.stock.StockApplication. Vérifiez que le nouveau test unitaire marche toujours.
+  - Supprimez du module stock tout le code Java de la partie commande, et renommez et déplacez la classe de démarrage Spring Boot en com.ipi.jva324.stock.StockApplication. Vérifiez que le nouveau test unitaire marche toujours.
 - Lancez le microservice Stock ainsi créé à l'aide de cette classe. Dans l'IHM qu'il sert, qu'est-ce qui marche encore et qu'est-ce qui ne marche plus, pourquoi ? Quelle est la solution classique, du point de vue web (C) ? du point de vue micro-services (G) ?
 
 NB. En temps normal, chaque microservice serait dans son propre repository Github vu qu'il est géré par une équipe de développement différente (à moins d'une politique "monorepo" dans l'entreprise). Tous sont ici dans le même repository (et de builds raccrochés dans un pom.xml racine) uniquement pour simplifier la gestion des exercices.

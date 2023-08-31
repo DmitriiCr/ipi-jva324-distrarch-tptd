@@ -15,9 +15,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CommandeService {
+public class CommandeServiceImpl {
 
-    protected Logger logger = LoggerFactory.getLogger(CommandeService.class);
+    protected Logger logger = LoggerFactory.getLogger(CommandeServiceImpl.class);
 
     /**
      * TODO better
