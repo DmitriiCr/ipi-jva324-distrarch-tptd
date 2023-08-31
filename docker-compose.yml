@@ -24,3 +24,12 @@ services:
       - "8080:8080"
     depends_on:
       - db
+  stock-service:
+    container_name: stock-service
+    build: ./stock
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    ports:
+      - "8081:8080"
+    depends_on:
+      - db
