@@ -32,9 +32,8 @@ public class CommandeProduitServiceRESTHALImpl implements CommandeProduitService
 
     @Override
     public List<ProduitEnStock> getProduitsFromStock() {
-        String getProduitsEndpoint = "api/data-rest/produitEnStocks"; // Change this endpoint as per your stock module
+        String getProduitsEndpoint = "api/data-rest/produitEnStocks";
 
-        // Make the HTTP GET request to the stock module's getProduits() endpoint
         ProduitEnStock[] produitsArray = springDataRestTemplate.getForObject(url + getProduitsEndpoint, ProduitEnStock[].class);
 
         if (produitsArray != null) {
