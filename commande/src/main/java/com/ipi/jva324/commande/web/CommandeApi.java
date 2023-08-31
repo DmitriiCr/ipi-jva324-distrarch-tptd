@@ -2,7 +2,6 @@ package com.ipi.jva324.commande.web;
 
 import com.ipi.jva324.commande.model.Commande;
 import com.ipi.jva324.commande.service.CommandeInvalideException;
-import com.ipi.jva324.commande.service.CommandeProduitService;
 import com.ipi.jva324.commande.service.CommandeServiceImpl;
 import com.ipi.jva324.commande.service.StockInsuffisantCommandeException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,5 +37,6 @@ public class CommandeApi {
     public List<Commande> getCommandes() {
         return commandeServiceImpl.getCommandes();
     }
+
 
 }

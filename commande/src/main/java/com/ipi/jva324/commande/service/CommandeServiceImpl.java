@@ -30,6 +30,8 @@ public class CommandeServiceImpl {
 
     @Autowired
     private ProduitService produitService;
+    @Autowired
+    private CommandeProduitService commandeProduitService;
 
     /**
      * TODO better
@@ -57,7 +59,7 @@ public class CommandeServiceImpl {
 
         // TODO get quantiteStockConnu, d'abord par RestTemplate
         logger.debug("createCommande produitId=" + commande.getProduitId());
-        ProduitEnStock produitEnStockFound = produitService.getProduit(commande.getProduitId());
+        ProduitEnStock produitEnStockFound = commandeProduitService.getProduit(commande.getProduitId());
         long quantiteDisponible = (produitEnStockFound == null) ? 0 : produitEnStockFound.getQuantiteDisponible();
         commande.setQuantiteDisponibleStockConnu(quantiteDisponible);
 

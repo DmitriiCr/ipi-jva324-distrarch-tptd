@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class CommandeProduitServiceLocalImpl implements CommandeProduitService{
 
@@ -17,5 +19,10 @@ public class CommandeProduitServiceLocalImpl implements CommandeProduitService{
     @Override
     public ProduitEnStock getProduit(long id) {
         return produitService.getProduit(id);
+    }
+
+    @Override
+    public List<ProduitEnStock> getProduitsFromStock() {
+        return produitService.getProduits();
     }
 }

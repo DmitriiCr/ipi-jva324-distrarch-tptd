@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import org.springframework.hateoas.Link;
 
 /**
  * TODO codeProduit, tags...
@@ -82,5 +83,8 @@ public class ProduitEnStock {
     @Override
     public boolean equals(Object obj) {
         return (obj instanceof ProduitEnStock) && this.id.equals(((ProduitEnStock) obj).id);
+    }
+
+    public void add(Link withSelfRel) {
     }
 }

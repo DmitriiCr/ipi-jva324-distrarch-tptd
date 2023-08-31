@@ -36,7 +36,7 @@ public class Jva324Application {
 	@Bean
 	public RepositoryRestConfigurer repositoryRestConfigurer() {
 		return RepositoryRestConfigurer.withConfig(config -> {
-			config.exposeIdsFor(Commande.class, ProduitEnStock.class);
+			config.exposeIdsFor(Commande.class);
 		});
 	}
 }
